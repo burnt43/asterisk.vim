@@ -1,3 +1,3 @@
 function! asterisk#dialplan#capture#CleanUp()
-  normal! :%s/\v\r//g
+  execute 'normal! :%s/\v\r//g' . "\<cr>"
 endfunction
