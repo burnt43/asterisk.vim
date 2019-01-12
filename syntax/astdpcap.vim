@@ -10,8 +10,8 @@ syntax match astdpcapExtension '\v\[\zs\w+\ze\@'
 
 syntax region astdpcapString start=/\v"/ end=/\v"/
 
-highlight link astdpcapKeyword Keyword
 highlight link astdpcapApplication Function
+highlight link astdpcapKeyword Keyword
 highlight link astdpcapString String
 highlight link astdpcapChannel SpecialChar
 highlight link astdpcapExtension String
