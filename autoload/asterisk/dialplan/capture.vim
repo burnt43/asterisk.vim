@@ -12,7 +12,7 @@ function! asterisk#dialplan#capture#CleanUp()
   silent execute 'normal! :%s/\v\w+\*CLI\>//g' . "\<cr>"
 
   " remove all lines that aren't dialplan debug (starts with -- or ==)
-  silent execute 'normal! :g/\v^\s+[-=]{2}/d' . "\<cr>"
+  silent execute 'normal! :g!/\v^\s+[-=]{2}/d' . "\<cr>"
 
   " remove leading whitespace
   silent execute 'normal! %s/\v^\s+//g' . "\<cr>"
