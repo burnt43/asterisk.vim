@@ -5,7 +5,7 @@ endif
 syntax keyword astdpcapKeyword Goto Executing
 syntax keyword astdpcapApplication ExecIf NoOp Set GotoIf Macro MacroExit UserEvent Wait PrivacyManager ChanIsAvail While Dial
 
-syntax match astdpcapChannel '\v(SIP|PJSIP)\/\w+-(\w+-)?\x+'
+syntax match astdpcapChannel '\v(SIP|PJSIP)\/\w+(-\w+)?(-\x+)?'
 
 syntax region astdpcapString start=/\v"/ end=/\v"/
 
