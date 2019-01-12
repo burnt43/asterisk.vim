@@ -2,8 +2,8 @@ if exists("b:current_syntax")
   finish
 endif
 
-syntax keyword astdpcapKeyword Goto Executing
 syntax keyword astdpcapApplication ExecIf NoOp Set GotoIf Macro MacroExit UserEvent Wait PrivacyManager ChanIsAvail While Dial
+syntax keyword astdpcapKeyword Goto Executing
 
 syntax match astdpcapChannel '\v(SIP|PJSIP)\/\w+(-\w+)?(-\x+)?'
 syntax match astdpcapExtension '\v\[\zs\w+\ze\@'
