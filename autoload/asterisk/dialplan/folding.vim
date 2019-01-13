@@ -1,5 +1,17 @@
 function! asterisk#dialplan#folding#GetFold(lnum)
-  return 0
+  let context          = asterisk#dialplan#folding#GetLineContext(a:lnum) 
+  let previous_context = asterisk#dialplan#folding#GetPreviousLineContext(a:lnum) 
+  let next_context     = asterisk#dialplan#folding#GetNextLineContext(a:lnum) 
+
+  if context !=# previous_context && context  !=# next_context
+    return 0
+  elseif context !=# previous_context && context  ==# next_context
+    return '>1'
+  elseif context ==# previous_context && context  !=# next_context
+    return '<1'
+  else
+    return '1'
+  end
 endfunction
 
 function! asterisk#dialplan#folding#GetLineContext(lnum)
