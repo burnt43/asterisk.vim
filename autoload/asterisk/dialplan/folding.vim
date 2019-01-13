@@ -3,14 +3,18 @@ function! asterisk#dialplan#folding#GetFold(lnum)
   let previous_context = asterisk#dialplan#folding#GetPreviousLineContext(a:lnum) 
   let next_context     = asterisk#dialplan#folding#GetNextLineContext(a:lnum) 
 
-  if context !=# previous_context && context  !=# next_context
-    return 0
-  elseif context !=# previous_context && context  ==# next_context
-    return '>1'
-  elseif context ==# previous_context && context  !=# next_context
-    return '<1'
+  if context !=# -1
+    if context !=# previous_context && context  !=# next_context
+      return 0
+    elseif context !=# previous_context && context  ==# next_context
+      return '>1'
+    elseif context ==# previous_context && context  !=# next_context
+      return '<1'
+    else
+      return '1'
+    end
   else
-    return '1'
+    return 0
   end
 endfunction
 
@@ -25,7 +29,7 @@ function! asterisk#dialplan#folding#GetLineContext(lnum)
     endif
   endfor
 
-  return ""
+  return -1
 endfunction
 
 function! asterisk#dialplan#folding#GetNextLineContext(lnum)
