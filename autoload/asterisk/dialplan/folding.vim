@@ -7,7 +7,7 @@ function! asterisk#dialplan#folding#GetLineContext(lnum)
   let regexes = ['\v\[\w+\@\zs.*\ze:\d+\]', '\vGoto \(\zs.*\ze,\w+,\w+\)']
 
   for regex in regexes
-    let context = matchstr(getline(lnum), regex)
+    let context = matchstr(getline(a:lnum), regex)
     if !empty(context)
       return context
     endif
