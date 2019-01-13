@@ -3,10 +3,8 @@ function! asterisk#dialplan#folding#GetFold(lnum)
 endfunction
 
 function! asterisk#dialplan#folding#GetLineContext(lnum)
-  let regexes = [
-    '\v\[\w+\@\zs.*\ze:\d+\]', " [$EXTENSTION@$CONTEXT:$LINE]
-    '\vGoto \(\zs.*\ze,\w+,\w+\)', " Goto ($CONTEXT,$EXTENSION,$LINE)
-  ]
+  " [ [$EXTENSTION@$CONTEXT:$LINE], Goto ($CONTEXT,$EXTENSION,$LINE) ]
+  let regexes = ['\v\[\w+\@\zs.*\ze:\d+\]', '\vGoto \(\zs.*\ze,\w+,\w+\)']
 
   for regex in regexes
     let context = matchstr(getline(lnum), regex)
