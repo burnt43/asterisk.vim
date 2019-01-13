@@ -22,7 +22,7 @@ This function can be called directly with:
 ```:call asterisk#dialplan#capture#CleanUp()``` 
 and it will execute. 
 
-I have this bound to a key mapping o nly good for buffers with astdpcap filetype:
+I have this bound to a key mapping only good for buffers with astdpcap filetype:
 ```
 augroup filetype_astdpcap
   autocmd!
