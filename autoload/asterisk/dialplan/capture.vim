@@ -15,5 +15,5 @@ function! asterisk#dialplan#capture#CleanUp()
   silent execute 'normal! :g!/\v^\s+[-=]{2}/d' . "\<cr>"
 
   " remove leading whitespace
-  silent execute 'normal! :%s/\v^\s+//g' . "\<cr>"
+  silent execute 'normal! :%s/\v^\s+//g' . "\<cr>gg"
 endfunction
