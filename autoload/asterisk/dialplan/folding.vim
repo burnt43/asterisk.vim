@@ -17,7 +17,17 @@ function! asterisk#dialplan#folding#GetLineContext(lnum)
 endfunction
 
 function! asterisk#dialplan#folding#GetNextLineContext(lnum)
+  if a:lnum ==# line("$")
+    return -1
+  else
+    return asterisk#dialplan#folding#GetLineContext(a:lnum + 1)
+  end
 endfunction
 
 function! asterisk#dialplan#folding#GetPreviousLineContext(lnum)
+  if a:lnum ==# 0
+    return -1
+  else
+    return asterisk#dialplan#folding#GetLineContext(a:lnum - 1)
+  end
 endfunction
