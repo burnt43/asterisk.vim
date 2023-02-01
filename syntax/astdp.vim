@@ -9,7 +9,6 @@ syntax match astdpComment '\v^;.*$'
 syntax match astdpContextHeader '\v^\[.*\]'
 syntax match astdpExtenDefKeyword '\v^exten'
 syntax match astdpGotoLabelDef '\v,n\(\zs[^()]+\ze\)'
-syntax match astdpGotoLabelUsageA '\vGoto\(\zs[^()]+\ze\)'
 syntax match astdpVariableDef '\v\(\zs\w+\ze\='
 syntax match astdpVarReplace '\v\$\{.*\}'
 
@@ -20,10 +19,9 @@ highlight link astdpContextHeader SpecialChar
 highlight link astdpComment Comment
 highlight link astdpExtenDefKeyword Keyword
 highlight link astdpFunction Function
-highlight link astdpGotoLabelDef SpecialChar
-highlight link astdpGotoLabelUsageA SpecialChar
+highlight link astdpGotoLabelDef Todo
 highlight link astdpString String
-highlight link astdpVariableDef Constant
-highlight link astdpVarReplace Define
+highlight link astdpVariableDef Define
+highlight link astdpVarReplace Constant
 
 let b:current_syntax = "astdp"
