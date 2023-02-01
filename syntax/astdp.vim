@@ -6,6 +6,7 @@ syntax keyword astdpApplication AddQueueMember ADSIProg AELSub AgentLogin AgentR
 syntax keyword astdpFunction DB LEN
 
 syntax match astdpComment '\v^;.*$'
+syntax match astdpContextHeader '\v^\[.*\]'
 syntax match astdpExtenDefKeyword '\v^exten'
 syntax match astdpGotoLabelDef '\v,n\(\zs[^()]+\ze\)'
 syntax match astdpGotoLabelUsageA '\vGoto\(\zs[^()]+\ze\)'
@@ -15,6 +16,7 @@ syntax match astdpVarReplace '\v\$\{.*\}'
 syntax region astdpString start=/\v"/ end=/\v"/
 
 highlight link astdpApplication Function
+highlight link astdpContextHeader SpecialChar
 highlight link astdpComment Comment
 highlight link astdpExtenDefKeyword Keyword
 highlight link astdpFunction Function
