@@ -21,7 +21,7 @@ highlight link astdpExtenDefKeyword Keyword
 highlight link astdpFunction Function
 highlight link astdpGotoLabelDef Todo
 highlight link astdpString String
-highlight link astdpVariableDef Define
+highlight link astdpVariableDef Keyword
 highlight link astdpVarReplace Define
 
 let b:current_syntax = "astdp"
