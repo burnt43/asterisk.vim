@@ -23,7 +23,7 @@ highlight link astdpFunction Function
 highlight link astdpGotoLabelDef SpecialChar
 highlight link astdpGotoLabelUsageA SpecialChar
 highlight link astdpString String
-highlight link astdpVariableDef SpecialChar
-highlight link astdpVarReplace SpecialChar
+highlight link astdpVariableDef Define
+highlight link astdpVarReplace Define
 
 let b:current_syntax = "astdp"
