@@ -9,6 +9,7 @@ syntax match astdpComment '\v^;.*$'
 syntax match astdpExtenDefKeyword '\v^exten'
 syntax match astdpGotoLabelDef '\v,n\(\zs[^()]+\ze\)'
 syntax match astdpGotoLabelUsageA '\vGoto\(\zs[^()]+\ze\)'
+syntax match astdpVariableDef '\vSet\(\zs\w+\ze\='
 
 syntax region astdpString start=/\v"/ end=/\v"/
 
@@ -19,5 +20,6 @@ highlight link astdpFunction Function
 highlight link astdpGotoLabelDef SpecialChar
 highlight link astdpGotoLabelUsageA SpecialChar
 highlight link astdpString String
+highlight link astdpVariableDef SpecialChar
 
 let b:current_syntax = "astdp"
