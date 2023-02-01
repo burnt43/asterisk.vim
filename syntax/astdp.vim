@@ -7,6 +7,7 @@ syntax keyword astdpFunction DB LEN
 
 syntax match astdpComment '\v^;.*$'
 syntax match astdpGotoLabelDefinition '\v,n\(\zs[^()]+\ze\)'
+syntax match astdpGotoLabelUsageA '\vGoto\(\zs[^()]+\ze\)'
 
 syntax region astdpString start=/\v"/ end=/\v"/
 
@@ -14,6 +15,7 @@ highlight link astdpApplication Function
 highlight link astdpComment Comment
 highlight link astdpFunction Function
 highlight link astdpGotoLabelDefinition SpecialChar
+highlight link astdpGotoLabelUsageA SpecialChar
 highlight link astdpString String
 
 let b:current_syntax = "astdp"
