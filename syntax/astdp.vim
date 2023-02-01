@@ -15,13 +15,13 @@ syntax match astdpVarReplace '\v\$\{.*\}'
 syntax region astdpString start=/\v"/ end=/\v"/
 
 highlight link astdpApplication Function
-highlight link astdpContextHeader SpecialChar
+highlight link astdpContextHeader PmenuSel
 highlight link astdpComment Comment
 highlight link astdpExtenDefKeyword Keyword
 highlight link astdpFunction Function
 highlight link astdpGotoLabelDef Todo
 highlight link astdpString String
 highlight link astdpVariableDef Define
-highlight link astdpVarReplace Constant
+highlight link astdpVarReplace Define
 
 let b:current_syntax = "astdp"
