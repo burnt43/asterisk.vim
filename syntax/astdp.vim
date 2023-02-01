@@ -15,7 +15,7 @@ syntax match astdpVarReplace '\v\$\{.*\}'
 syntax region astdpString start=/\v"/ end=/\v"/
 
 highlight link astdpApplication Function
-highlight link astdpContextHeader PmenuSel
+highlight link astdpContextHeader Type
 highlight link astdpComment Comment
 highlight link astdpExtenDefKeyword Keyword
 highlight link astdpFunction Function
